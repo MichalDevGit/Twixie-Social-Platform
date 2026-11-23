@@ -6,7 +6,7 @@
     --border-color: #f5f5f5;
 }
 
-/* --- מעטפת הדף --- */
+/* --- Page Wrapper --- */
 .follow-page-wrapper {
     background-color: var(--twixie-bg);
     min-height: 100vh;
@@ -17,7 +17,7 @@
     align-items: flex-start;
 }
 
-/* --- הקופסה של הרשימה --- */
+/* --- List Container --- */
 .follow-list-container {
     width: 100%;
     max-width: 600px;
@@ -25,14 +25,14 @@
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 
-    /* === תיקון 1: שינוי מ-hidden ל-visible === */
-    /* זה מאפשר לכרטיס הריחוף לצאת מחוץ לגבולות הקופסה */
+    /* === Fix 1: Change from hidden to visible === */
+    /* This allows the hover card to extend beyond container boundaries */
     overflow: visible;
 
     min-height: 600px;
     display: flex;
     flex-direction: column;
-    position: relative; /* כדי לשמור על יציבות */
+    position: relative; /* To maintain stability */
 }
 
 /* --- כותרת הרשימה --- */

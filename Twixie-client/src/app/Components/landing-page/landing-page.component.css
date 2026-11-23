@@ -1,8 +1,8 @@
 :host {
-    /* פאלטת הצבעים של Twixie */
-    --twixie-yellow: #FFD600;       /* צהוב מותג חזק */
-    --twixie-yellow-dark: #FBC02D;  /* צהוב כהה יותר להצללות */
-    --twixie-black: #212121;        /* שחור כהה לטקסט */
+    /* Twixie Color Palette */
+    --twixie-yellow: #FFD600;       /* Strong brand yellow */
+    --twixie-yellow-dark: #FBC02D;  /* Darker yellow for shadows */
+    --twixie-black: #212121;        /* Dark black for text */
     --white: #ffffff;
     --gray-light: #f5f5f5;
     --gray-text: #757575;
@@ -13,12 +13,12 @@
     min-height: 100vh;
     width: 100%;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    overflow: hidden; /* מונע גלילה מיותרת */
+    overflow: hidden; /* Prevents unnecessary scrolling */
 }
 
-/* --- צד שמאל: מותג (צהוב) --- */
+/* --- Left Side: Brand (Yellow) --- */
 .brand-side {
-    flex: 1.2; /* לוקח קצת יותר מקום מצד ימין */
+    flex: 1.2; /* Takes slightly more space than right side */
     background-color: var(--twixie-yellow);
     display: flex;
     align-items: center;
@@ -39,10 +39,10 @@
 }
 
 .app-logo {
-    width: 180px; /* גודל לוגו מרשים */
+    width: 180px; /* Impressive logo size */
     height: auto;
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1)); /* צל עדין ללוגו */
-    /* אנימציית ריחוף קלה */
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1)); /* Subtle shadow for logo */
+    /* Subtle floating animation */
     animation: float 6s ease-in-out infinite;
 }
 
@@ -63,11 +63,11 @@
     font-weight: 500;
 }
 
-/* קישוטים ברקע הצהוב */
+/* --- Yellow Background Decorations --- */
 .circle-decoration {
     position: absolute;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.15); /* לבן שקוף */
+    background: rgba(255, 255, 255, 0.15); /* Transparent white */
 }
 
 .circle-decoration.top {
@@ -84,7 +84,7 @@
     right: -200px;
 }
 
-/* --- צד ימין: פעולות (לבן) --- */
+/* --- Right Side: Actions (White) --- */
 .action-side {
     flex: 1;
     background-color: var(--white);
@@ -113,7 +113,7 @@
     margin: 0 0 50px 0;
 }
 
-/* --- כפתורים --- */
+/* --- Buttons --- */
 .buttons-stack {
     display: flex;
     flex-direction: column;
@@ -125,7 +125,7 @@
     align-items: center;
     justify-content: center;
     padding: 16px;
-    border-radius: 50px; /* כפתורים עגולים לגמרי */
+    border-radius: 50px; /* Completely round buttons */
     font-size: 1.1rem;
     font-weight: 700;
     text-decoration: none;
@@ -137,7 +137,7 @@
     transform: scale(0.98);
 }
 
-/* כפתור ראשי - שחור (קונטרסט חזק לצהוב) */
+/* --- Primary Button - Black (Strong Contrast to Yellow) --- */
 .btn-primary {
     background-color: var(--twixie-black);
     color: var(--white);
@@ -151,7 +151,7 @@
     transform: translateY(-2px);
 }
 
-/* כפתור משני - מסגרת */
+/* --- Secondary Button - Outline --- */
 .btn-outline {
     background-color: transparent;
     color: var(--twixie-black);
@@ -163,7 +163,7 @@
     background-color: #fafafa;
 }
 
-/* מפריד טקסט */
+/* --- Text Separator --- */
 .divider {
     text-align: center;
     margin: 10px 0;
@@ -180,7 +180,7 @@
     font-weight: 500;
 }
 
-/* פוטר קטן */
+/* --- Small Footer --- */
 .mini-footer {
     margin-top: 60px;
     font-size: 0.8rem;
@@ -188,7 +188,7 @@
     text-align: center;
 }
 
-/* --- אנימציות --- */
+/* --- Animations --- */
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
@@ -204,16 +204,16 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- התאמה למובייל --- */
+/* --- Mobile Adaptation --- */
 @media (max-width: 900px) {
     .landing-container {
-        flex-direction: column; /* הופך לטור */
+        flex-direction: column; /* Changes to column layout */
     }
 
     .brand-side {
         flex: 1;
         padding: 60px 20px;
-        min-height: 40vh; /* לוקח פחות מחצי מסך */
+        min-height: 40vh; /* Takes less than half the screen */
     }
 
     .app-logo {
@@ -227,7 +227,7 @@
     .action-side {
         flex: 1.5;
         padding: 40px 20px;
-        align-items: flex-start; /* הצמדה למעלה במובייל */
+        align-items: flex-start; /* Align to top on mobile */
     }
 
     .welcome-title {

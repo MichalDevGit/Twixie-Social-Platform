@@ -72,13 +72,13 @@
   max-width: 100%;
 }
 
-/* בועת הטקסט */
+/* --- Text Bubble --- */
 p.bubble {
   background-color: #f0f2f5;
   color: #050505;
   padding: 8px 12px;
   border-radius: 18px;
-  /* נותן לבועה "זנב" קטן בצד שמאל למעלה שיתאים לשיחה - אופציונלי */
+  /* Gives the bubble a small "tail" on the top left for conversation style - optional */
   border-top-left-radius: 4px;
   font-size: 14px;
   line-height: 1.4;
@@ -87,7 +87,7 @@ p.bubble {
   word-wrap: break-word;
 }
 
-/* --- הכפתורים המרחפים --- */
+/* --- Hovering Action Buttons --- */
 .action-buttons {
   background-color: #ffffff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -101,14 +101,14 @@ p.bubble {
   transition: all 0.2s ease-out;
 }
 
-/* חשיפה בהובר */
+/* --- Reveal on Hover --- */
 .bubble-wrapper:hover .action-buttons {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
 }
 
-/* עיצוב האייקונים */
+/* --- Icon Styling --- */
 .action-buttons button {
   background: none;
   border: none;
@@ -140,30 +140,30 @@ p.bubble {
 
 
 
-/* --- עיצוב מצב "תגובה מחוקה" --- */
+/* --- Deleted Response State Styling --- */
 
-/* 1. עמעום כללי של השורה */
+/* 1. General dimming of the row */
 .deleted-mode {
-  opacity: 0.7; /* הופך את הכל לקצת שקוף */
+  opacity: 0.7; /* Makes everything slightly transparent */
 }
 
-/* 2. שינוי בועת הטקסט - מראה "ריק" יותר */
+/* 2. Change text bubble - looks more "empty" */
 .deleted-mode .bubble {
-  background-color: transparent; /* מבטל את הרקע האפור הרגיל */
-  border: 0.05px solid #e1e1e1; /* מסגרת מקווקוות עדינה */
-  color: #8a8d91; /* טקסט אפור */
-  font-style: italic; /* טקסט נטוי */
-  padding: 6px 10px; /* קצת פחות מרווח */
+  background-color: transparent; /* Removes the regular gray background */
+  border: 0.05px solid #e1e1e1; /* Delicate dotted border */
+  color: #8a8d91; /* Gray text */
+  font-style: italic; /* Italic text */
+  padding: 6px 10px; /* Slightly less padding */
 }
 
-/* 3. טיפול בתמונת הפרופיל */
+/* 3. Handling the profile picture */
 .deleted-mode .comment-avatar {
-  filter: grayscale(100%); /* הופך את התמונה לשחור לבן */
+  filter: grayscale(100%); /* Turns the image to black and white */
   opacity: 0.5;
-  cursor: default; /* מבטל את האייקון של היד */
+  cursor: default; /* Removes the pointer cursor */
 }
 
-/* 4. הסתרת שם המשתמש והתאריך (אופציונלי - אם רוצים להשאיר רק "Deleted") */
+/* 4. Hiding username and date (optional - if you want to leave only "Deleted") */
 .deleted-mode .user-info strong {
   color: #8a8d91;
   text-decoration: none;
@@ -171,17 +171,17 @@ p.bubble {
   cursor: default;
 }
 
-/* 5. חשוב מאוד: הסתרת כפתורי הפעולה (Reply/Delete) */
-/* כדי שלא יוכלו להגיב או למחוק שוב תגובה מחוקה */
+/* 5. Very important: Hiding action buttons (Reply/Delete) */
+/* So they cannot reply or delete a deleted response again */
 .deleted-mode .action-buttons,
 .deleted-mode .bubble-wrapper:hover .action-buttons {
   display: none !important;
   visibility: hidden !important;
 }
 
-/* 6. ביטול אפשרות לחיצה על התגובה */
+/* 6. Disabling clickability on the response */
 .deleted-mode .bubble-wrapper {
-  pointer-events: none; /* מונע כל אינטראקציה עם הבועה */
+  pointer-events: none; /* Prevents any interaction with the bubble */
 }
 
 /* === Dark Mode Styles === */

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-/* --- משתני צבעים --- */
+/* === Color Variables === */
 :host {
   --brand-yellow: #FFD600;
   --brand-yellow-hover: #F7C600;
@@ -8,7 +8,7 @@
   --text-on-yellow: #000000;
 }
 
-/* القונטיינר הראשי */
+/* === Main Container === */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -23,11 +23,11 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* --- צד שמאל (לוגו ופיד) --- */
+/* --- Left Side (Logo and Feed) --- */
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 20px; /* ריווח כללי */
+  gap: 20px; /* General spacing */
 }
 
 .logo {
@@ -43,7 +43,7 @@
   text-shadow: 1px 1px 0px rgba(0,0,0,0.05);
 }
 
-/* --- עיצוב כפתור Contact Us החדש --- */
+/* --- New Contact Us Button Styling --- */
 .contact-btn {
   text-decoration: none;
   display: flex;
@@ -52,7 +52,7 @@
   padding: 6px 16px;
   border-radius: 20px;
   
-  /* צבעים בסגנון "כפתור משני" */
+  /* Colors in "secondary button" style */
   background-color: #ffffff;
   border: 1px solid #e4e6eb;
   color: #65676b;
@@ -64,22 +64,22 @@
 
 .contact-btn i {
   font-size: 14px;
-  color: #65676b; /* אייקון אפור */
+  color: #65676b; /* Gray icon */
   transition: color 0.2s;
 }
 
 .contact-btn:hover {
   background-color: #f0f2f5;
   border-color: #d8dadf;
-  color: #1c1e21; /* טקסט נהיה כהה יותר בהובר */
-  transform: translateY(-1px); /* אפקט הרמה עדין */
+  color: #1c1e21; /* Text becomes darker on hover */
+  transform: translateY(-1px); /* Subtle lift effect */
 }
 
 .contact-btn:hover i {
-  color: var(--brand-yellow-hover); /* האייקון מקבל צבע מותג בהובר */
+  color: var(--brand-yellow-hover); /* Icon gets brand color on hover */
 }
 
-/* לינקים רגילים (Feed) */
+/* --- Regular Links (Feed) --- */
 .nav-link {
   text-decoration: none;
   color: #65676b;
@@ -107,12 +107,12 @@
   color: #eab308;
 }
 
-/* התאמה למובייל - הסתרת טקסטים */
+/* --- Mobile Adaptation - Hiding Texts --- */
 @media (max-width: 600px) {
-  .link-text { display: none; } /* מסתיר גם ב-Contact וגם ב-Feed */
+  .link-text { display: none; } /* Hides both in Contact and Feed */
   .logo { display: none; }
   
-  /* התאמת כפתור Contact למובייל שיראה כמו אייקון */
+  /* Adapting Contact Button for Mobile to Look Like an Icon */
   .contact-btn {
     padding: 8px;
     border-radius: 50%;
@@ -120,11 +120,11 @@
     height: 36px;
     justify-content: center;
     border: none;
-    background-color: #f0f2f5; /* רקע אפור עדין במקום מסגרת */
+    background-color: #f0f2f5; /* Subtle gray background instead of border */
   }
 }
 
-/* --- צד ימין (כפתורים ופרופיל) --- */
+/* === Right Side (Buttons and Profile) === */
 .nav-right {
   display: flex;
   align-items: center;
