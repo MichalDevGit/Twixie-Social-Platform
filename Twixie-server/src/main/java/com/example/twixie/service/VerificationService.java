@@ -23,16 +23,6 @@ public class VerificationService {
         return false;
     }
 
-    //    public void sendMail(String email){
-//        try{
-//            VerificationCodeGenerator verificationCodeGenerator=new VerificationCodeGenerator();
-//            String code  = verificationCodeGenerator.generateVerificationCode();
-//            usersRepository.findByEmail(email).setVerificationCode(code);
-//            emailService.sendVerificationEmail(email, code);}
-//        catch (Exception e) {
-//
-//        }
-//    }
 
 
 }

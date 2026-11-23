@@ -26,7 +26,7 @@ export class AddResponseComponent implements OnInit {
     private route: ActivatedRoute,
     private _messageService: MessageService,
     private _settingService: UserSettingsService,
-    public dialogRef: MatDialogRef<ConfirmDialogComponent>,
+    public dialogRef: MatDialogRef<AddResponseComponent>,
     @Inject(MAT_DIALOG_DATA) public data: { postId: number; parentResponseId: number }
   ) { }
 
