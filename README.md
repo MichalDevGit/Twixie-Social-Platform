@@ -37,6 +37,7 @@ Twixie is a full-stack application with an Angular frontend and a Spring Boot ba
 - **Environment variables** (for server):
   - `GEMINI_KEY` – API key for Gemini
   - `GMAIL_PASSWORD` – Gmail app password for email
+  - `JWT_SECRET` – Base64 key (at least 32 bytes) used to sign login tokens
 
 ### Backend (Twixie-server)
 
@@ -80,4 +81,4 @@ mvn test               # Run tests
 
 - For detailed Angular CLI usage, see `Twixie-client/README.md`.
 - The server uses H2 with `ddl-auto=update`; the database file is created in `Twixie-server/`.
-- Set `GEMINI_KEY` and `GMAIL_PASSWORD` before running the server for AI and email features.
+- Set `GEMINI_KEY`, `GMAIL_PASSWORD` and `JWT_SECRET` before running the server (the server will not start without `JWT_SECRET`).

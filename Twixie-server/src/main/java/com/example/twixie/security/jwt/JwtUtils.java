@@ -7,6 +7,7 @@ import io.jsonwebtoken.security.Keys;
 import io.jsonwebtoken.security.SignatureException;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseCookie;
 import org.springframework.stereotype.Component;
 import org.springframework.web.util.WebUtils;
@@ -18,6 +19,10 @@ import java.util.Date;
 //
 @Component
 public class JwtUtils {
+
+    // Read from the JWT_SECRET environment variable (see application.properties)
+    @Value("${jwt.secret}")
+    private String jwtSecret;
 
     //********תפקיד הפונקציה:
     //מה הפונקציה מקבלת?
@@ -75,7 +80,7 @@ public class JwtUtils {
     //מה הפונקציה מחזירה?
 
     private Key key() {
-        return Keys.hmacShaKeyFor(Decoders.BASE64.decode("REMOVED_JWT_SECRET"));
+        return Keys.hmacShaKeyFor(Decoders.BASE64.decode(jwtSecret));
     }
 
     //********תפקיד הפונקציה:
