@@ -16,3 +16,6 @@ npm-debug.log*
 
 # ===== כללי =====
 .DS_Store
+
+# ===== Local database (private data) =====
+*.db
